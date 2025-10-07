@@ -20,7 +20,8 @@
   </header>
 
   <main>
-    <form onsubmit="return validarFormulario()">
+    <form onsubmit="return validarFormulario(event)">
+      <div id="form-message" style="display: none;"></div>
       <label>Nome:<br><input type="text" id="nome" required></label><br>
       <label>Email:<br><input type="email" id="email" required></label><br>
       <label>Mensagem:<br><textarea id="mensagem" required></textarea></label><br>

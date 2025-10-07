@@ -1,0 +1,7 @@
+Flask
+flask-cors
+requests
+google-api-python-client
+google-auth
+SQLAlchemy
+python-dotenv
