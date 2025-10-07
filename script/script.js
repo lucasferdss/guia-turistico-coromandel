@@ -1,7 +1,5 @@
-// script/script.js
-
 (function () {
-  // tenta achar o form pela id comum; se não achar, pega o primeiro form da página
+
   const form =
     document.getElementById("contactForm") ||
     document.querySelector("form");
@@ -11,7 +9,6 @@
     return;
   }
 
-  // campos por id OU por name
   const $nome =
     document.getElementById("nome") ||
     form.querySelector('[name="nome"]');
@@ -24,7 +21,6 @@
 
   const $btn = form.querySelector('button[type="submit"]');
 
-  // validação simples
   function isValidEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
   }
@@ -60,7 +56,7 @@
       if (resp.ok && data?.success) {
         alert(data.message || "Contato enviado com sucesso!");
         form.reset();
-        // rola pro topo se quiser
+      
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         alert(
